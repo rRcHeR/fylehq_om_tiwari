@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Marketing Agency</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0% 20% 0% 20%;
+        height: 100vh;
+      }
+
+      .hero-text {
+        max-width: 50%;
+      }
+
+      .hero-text h1 {
+        color: #ff3147;
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      .hero-text h2 {
+        font-size: 36px;
+        margin: 10px 0;
+        font-weight: 700;
+      }
+
+      .hero-text p {
+        margin: 20px 0;
+        line-height: 1.6;
+      }
+
+      .hero-text .btn {
+        background-color: #ff3147;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+        height: 35rem;
+      }
+
+      .why-choose-us {
+        text-align: center;
+        padding: 50px 0;
+      }
+
+      .why-choose-us h3 {
+        margin-bottom: 30px;
+        color: #ff3147;
+      }
+      .why-choose-us h1 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .features {
+        display: flex;
+        justify-content: space-between;
+        /* gap: 1rem; */
+        margin-top: 30px;
+        padding: 2% 15% 2% 15%;
+      }
+
+      .feature {
+        flex: 1;
+        padding: 20px;
+        text-align: left;
+      }
+
+      .feature img {
+        height: 72px;
+        margin-bottom: 6px;
+      }
+
+      .projects {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 50px 0;
+      }
+
+      .projects h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        color: #ff3147;
+      }
+
+      .projects h1 {
+        margin-top: 0%;
+        margin-bottom: 30px;
+        padding-top: 0%;
+        font-size: 45px;
+      }
+      .project-content {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        height: 60vh;
+      }
+
+      .project-content img {
+        max-width: 70%;
+        height: 100%;
+        border-radius: 10px;
+        margin-right: 30px;
+      }
+
+      .project-details {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 10rem;
+        background-color: #f9f9f9;
+      }
+
+      .project {
+        /* margin-bottom: 20px; */
+        padding: 20px 10px 10px 20px;
+        font-size: 16px;
+      }
+
+      .project p {
+        padding-top: 10px;
+        font-size: 12px;
+        line-height: 25px;
+      }
+
+      .project.active {
+        background-color: #ff3147;
+        color: #fff;
+      }
+
+      .growth {
+        background-color: #f9f9f9;
+        text-align: center;
+        padding: 50px 0;
+      }
+
+      .growth h3 {
+        color: #ff3147;
+        margin-bottom: 30px;
+        font-size: 24px;
+      }
+
+      .growth h1 {
+        margin-bottom: 30px;
+        font-size: 45px;
+      }
+
+      .growth-stats {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        width: 70%;
+        margin: auto;
+      }
+
+      .stat {
+        background-color: white;
+        padding: 40px;
+        min-width: 8rem;
+        height: 14rem;
+        margin: 0%;
+        text-align: center;
+      }
+
+      .stat h4 {
+        font-size: 60px;
+        font-weight: 500;
+      }
+      .stat p {
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 300;
+      }
+
+      .testimonials {
+        padding: 50px;
+        text-align: center;
+      }
+      .services {
+        padding: 100px 200px 200px 200px;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .service_text {
+        display: flex;
+      }
+
+      .services h2,
+      .testimonials h2 {
+        color: #ff3147;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .services h1,
+      .testimonials h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .testimonials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0%;
+      }
+
+      .testimonials p {
+        margin: auto;
+        text-align: left;
+        font-size: 1em;
+        margin-bottom: 20px;
+      }
+
+      .testimonials h3 {
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #ff3147;
+        text-transform: uppercase;
+      }
+      .testimonials h1 {
+        margin-bottom: 30px;
+        font-size: 45px;
+        text-transform: uppercase;
+      }
+
+      .clients {
+        width: 100vw;
+        height: 30vh;
+        background-color: #ff3147;
+      }
+      .services h1 {
+        width: 50%;
+      }
+      .services p {
+        font-size: 1em;
+        margin: 20px 0px 0px 60px;
+        width: 70%;
+      }
+
+      .services-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .service-item {
+        width: 16rem;
+        height: 26rem;
+        position: relative;
+      }
+
+      .service-item img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .web-dev {
+        background-color: #ff3147;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .web-dev img {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .web-dev p {
+        /* align-self: flex-start; */
+        margin-left: 0.1rem;
+        font-size: small;
+        line-height: 1.5rem;
+        text-align: center;
+        width: 100%;
+      }
+
+      .web-dev a img {
+        width: 1.5rem;
+        height: 1rem;
+        margin: auto;
+        padding: auto;
+      }
+      .web-dev a {
+        color: #ff3147;
+        background: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+        margin-top: 20px;
+        display: flex;
+        font-weight: 700;
+        font-size: 0.8rem;
+        gap: 0.8rem;
+        align-items: center;
+      }
+
+      .dot_images {
+        display: flex;
+        padding-top: 2rem;
+        gap: 1.4rem;
+      }
+      .testimonials .author {
+        color: #ff3147;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .clients {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .clients img {
+        width: 100px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>AWARD WINNING</h1>
+        <h2>DIGITAL MARKETING AGENCY</h2>
+        <p>
+          Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+          Pellentesque vitae ante at elit fringilla ac at purus.
+        </p>
+        <a href="#" class="btn" id="contactUsBtn">CONTACT US</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero.png" alt="Hero Image" />
+      </div>
+    </section>
+
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Talk to us</h3>
+        <form action="https://getform.io/f/akkgngka" method="post">
+          <input
+            type="email"
+            name="work-email"
+            placeholder="Work email*"
+            required
+          />
+          <div class="names">
+            <input
+              type="text"
+              name="first-name"
+              placeholder="First name*"
+              required
+            />
+            <input
+              type="text"
+              name="last-name"
+              placeholder="Last name*"
+              required
+            />
+          </div>
+          <label>
+            <input type="checkbox" name="terms" required />
+            I agree to Fyle's terms and conditions, and provide consent to send
+            me communication.
+          </label>
+          <br />
+          <button type="submit">Contact Us</button>
+        </form>
+      </div>
+    </div>
+
+
+    <section class="services">
+      <h2>WHAT WE DO</h2>
+      <div class="service_text">
+        <h1>
+          SERVICES PROVIDE <br />
+          FOR YOU
+        </h1>
+        <p>
+          Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+          Pellentesque vitae ante et elit fringilla ac at purus, Morbi sed lacus
+          nec risus finibus feugiat et fermentum
+        </p>
+      </div>
+      <div class="services-container">
+        <div class="service-item">
+          <img src="assets/1-1.png" alt="Service 1" />
+          <div class="web-dev">
+            <img src="assets/icon.svg" />
+            <h3>WEB DEVELOPMENT</h3>
+            <p>
+              Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+              Pellentesque
+            </p>
+            <a href="http://www.fylehq.com" target="_blank">READ MORE <img src="assets/arrow.svg" /></a>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="assets/2-1.png" alt="Service 2" />
+          <div class="web-dev">
+            <img src="assets/icon.svg" />
+            <h3>WEB DEVELOPMENT</h3>
+            <p>
+              Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+              Pellentesque
+            </p>
+            <a href="http://www.fylehq.com" target="_blank">READ MORE <img src="/assets/arrow.svg" /></a>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="assets/3-1.png" alt="Service 3" />
+          <div class="web-dev">
+            <img src="assets/icon.svg" />
+            <h3>WEB DEVELOPMENT</h3>
+            <p>
+              Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+              Pellentesque
+            </p>
+            <a href="http://www.fylehq.com" target="_blank">READ MORE <img src="/assets/arrow.svg" /></a>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="assets/2-1.png" alt="Service 4" />
+          <div class="web-dev">
+            <img src="assets/icon.svg" />
+            <h3>WEB DEVELOPMENT</h3>
+            <p>
+              Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+              Pellentesque
+            </p>
+            <a href="https://www.fylehq.com" target="_blank">READ MORE <img src="/assets/arrow.svg" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="dot_images">
+        <img src="assets/red_dot.svg" class="dot active" data-slide="0" />
+        <img src="assets/black_dot.svg" class="dot" data-slide="1" />
+        <img src="assets/black_dot.svg" class="dot" data-slide="2" />
+        <img src="assets/black_dot.svg" class="dot" data-slide="3" />
+      </div>
+    </section>
+
+    <section class="why-choose-us">
+      <div class="container">
+        <h3>WHY CHOOSE US</h3>
+        <h1>WHY WE ARE BEST</h1>
+        <div class="features">
+          <div class="feature">
+            <img src="assets/1.svg" alt="Icon 1" />
+            <h4>Clarified Vision & Target</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy.
+            </p>
+          </div>
+          <div class="feature">
+            <img src="assets/2.svg" alt="Icon 2" />
+            <h4>High Performance</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy.
+            </p>
+          </div>
+          <div class="feature">
+            <img src="assets/3.svg" alt="Icon 3" />
+            <h4>Maintain Security</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy.
+            </p>
+          </div>
+          <div class="feature">
+            <img src="assets/4.svg" alt="Icon 4" />
+            <h4>Better Strategy & Quality</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h3>OUR PROJECT</h3>
+      <h1>WHY WE ARE BEST</h1>
+      <div class="project-content">
+        <img
+          src="assets/image2.jpg"
+          alt="Project Image"
+          class="project-image img-1"
+        />
+        <img
+          src="assets/image.png"
+          alt="Project Image"
+          class="project-image active img-2"
+        />
+        <img
+          src="assets/imag3.jpg"
+          alt="Project Image"
+          class="project-image img-3"
+        />
+        <div class="project-details">
+          <div class="project">
+            <h4>Genderless Kei - Japan's Hot</h4>
+            <p>
+              Set to launch on the manufacturer's new A330neo aircraft in 2017,
+              it's offering lots of
+            </p>
+          </div>
+          <div class="project active">
+            <h4>Better Strategy & Quality</h4>
+            <p>
+              Set to launch on the manufacturer's new A330neo aircraft in 2017,
+              it's offering lots of
+            </p>
+          </div>
+          <div class="project">
+            <h4>Genderless Kei - Japan's Hot</h4>
+            <p>
+              Set to launch on the manufacturer's new A330neo aircraft in 2017,
+              it's offering lots of
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="growth">
+      <div class="container">
+        <h3>EXPERTS GROWTHS</h3>
+        <h1>OUR COMPANY GROWTH</h1>
+        <div class="growth-stats">
+          <div class="stat">
+            <img src="assets/heart (2).svg" />
+            <h4>199 +</h4>
+            <p>Satisfied Customers</p>
+          </div>
+          <div class="stat">
+            <img src="assets/clock (3).svg" />
+            <h4>1591 +</h4>
+            <p>Days Of Operation</p>
+          </div>
+          <div class="stat">
+            <img src="assets/Path 4402.svg" />
+            <h4>283 +</h4>
+            <p>Complete Projects</p>
+          </div>
+          <div class="stat">
+            <img src="assets/Path 4406.svg" />
+            <h4>75 +</h4>
+            <p>Win Awards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h3>Client's Feedback</h3>
+      <h1>People Say's About Us !</h1>
+      <div class="testimonial_text">
+        <p>
+          <img src="assets/Quotemarks-left.svg" />
+
+          Jannat Tumpa The standard chunk of Lorem Ipsum used since the 1500s<br />
+          is reproduced below for those interested. Sections Bonorum et Malorum
+          original.
+        </p>
+        <p class="author">
+          JANNAT TUMPA - COO, <span> AMERIMAR ENTERPRISES, INC.</span>
+        </p>
+      </div>
+      <div class="clients">
+        <img
+          src="assets/Group 500.png"
+          alt="Client 1"
+          style="
+            width: 90rem;
+            margin-bottom: 0;
+            position: absolute;
+            transform: translateY(100%);
+          "
+        />
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
